@@ -1,0 +1,30 @@
+A Tool is the mechanism by which we bridge the gap from that silent room to the outside world. It is a function that you, the engineer, create and offer to the LLM, granting it a new capability.
+When you write @tool above your function, you are effectively telling the LLM:
+"I have placed a new capability on your workbench. Here is its name (google_search_tool), here is its instruction manual (the docstring), and here is how you use it. When your reasoning dictates it is necessary, you may pick up this tool and use it."
+
+
+In LangGraph, the State is a Python dictionary that acts as the single source of truth for your agent. It is the "project binder" that gets passed from one specialist (node) to the next.
+The query_generation_node opens the binder, reads the job_criteria, adds its google_queries, and passes it on.
+The search_node opens the binder, reads the google_queries, adds its search_results, and passes it on.
+The report_node opens the binder, reads the search_results, adds the final_report, and the project is complete.
+
+🔵 Streamlit User Input
+      |
+      v
+🟢 query_generation_node  (LLM creates 5 Google search queries)
+      |
+      v
+🔷 search_node            (calls Tavily via google_search_tool for each query)
+      |
+      v
+🟡 report_node            (formats all profile summaries into final report)
+      |
+      v
+✅ Streamlit output:      Final markdown report shown in the UI
+
+
+.get() is a dictionary method in Python. It safely retrieves the value for a given key without raising an error if the key doesn't exist.
+dictionary.get(key, default_value)
+key: the key you want to look up
+
+default_value: (optional) the value to return if the key doesn't exist

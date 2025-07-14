@@ -1,0 +1,15 @@
+langchain
+langgraph
+langchain-community
+langchain-groq
+tavily-python
+beautifulsoup4
+requests
+fastembed
+faiss-cpu
+streamlit
+python-dotenv
+jina
+firecrawl-py
+langchain-tavily
+unstructured

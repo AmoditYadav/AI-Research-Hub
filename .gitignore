@@ -1,0 +1,22 @@
+# Python Virtual Environment (DO NOT UPLOAD)
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Secrets and environment variables (CRITICAL - DO NOT UPLOAD)
+.env
+
+# Streamlit secrets folder
+.streamlit/
+
+# --- Ignore specific old/testing Python files as requested ---
+app_search_new.py
+app_search.py
+app1stUpdate.py
+app.py
+
+# If you did NOT rename app_11jul.py to app.py, then add the original 'app.py' to this list.
+# app.py 
