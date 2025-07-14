@@ -36,7 +36,7 @@ This application is composed of two specialized AI agents accessible through a u
 -   **Backend:** Python
 -   **UI:** Streamlit
 -   **AI Orchestration:** LangChain & LangGraph
--   **LLM Provider:** Groq (using `llama3-70b-8192`)
+-   **LLM Provider:** Groq (using `meta-llama/llama-4-scout-17b-16e-instruct`)
 -   **Search Tool:** Tavily Search API
 
 ---
